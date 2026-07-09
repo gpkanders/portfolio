@@ -1,3 +1,4 @@
 export default function Projects() {
-    return <div></div>
+    return <div>
+    </div>
 }
