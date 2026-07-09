@@ -4,7 +4,8 @@ export default function AboutPage() {
   return (
     <>
       <About />
-      {/* any other home-only content */}
+      Hello!!!
+      {/* any other about-only content */}
     </>
   )
 }
