@@ -23,7 +23,7 @@ export default function Projects() {
     <div className="flex flex-col gap-24 py-24 px-4 md:px-12 py-12">
         {projects.map((project, i) => (
         <div key={i} className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Video column */}
+            {/* video column */}
             <div className="w-full md:w-1/2 aspect-video">
             <iframe
                 src={project.video}
@@ -33,7 +33,7 @@ export default function Projects() {
             />
             </div>
 
-            {/* Text column */}
+            {/* text column */}
             <div className="w-full md:w-1/2 flex flex-col gap-4">
             <h2 className="text-xl font-bold text-gray-300">{project.title}</h2>
             {project.paragraphs.map((p, j) => (

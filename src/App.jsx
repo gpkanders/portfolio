@@ -6,10 +6,12 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'  
 import Music from './components/Music'  
+import Resume from './components/Resume'  
 import Home from './pages/Home'
 import ProjectsPage from './pages/ProjectsPage'
 import AboutPage from './pages/AboutPage'
 import MusicPage from './pages/MusicPage'
+import ResumePage from './pages/ResumePage'
 
 
 
@@ -24,6 +26,7 @@ function App() {
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/projects" element={<ProjectsPage/>}/>
             <Route path="/music" element={<MusicPage/>}/>
+            <Route path="/resume" element={<ResumePage/>}/>
           </Routes>
         </Router>
       </div>
