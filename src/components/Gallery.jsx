@@ -42,7 +42,7 @@ export default function Gallery() {
               alt={img.alt}
               loading="lazy"
               decoding="async"
-              fetchpriority="low"
+              fetchPriority="low"
               style={styles.image}
               className="gallery-thumb"
             />
