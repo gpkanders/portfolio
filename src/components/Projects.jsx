@@ -1,6 +1,21 @@
 export default function Projects() {
     const projects = [
         {
+          title:"Synthesizer Plugin",
+          video: "https://www.youtube.com/embed/h5dY_hA8ZRw?si=jWCmTPnqDzYbA6Bx",
+          paragraphs: [
+            "This is a simple synthesizer VST/AU equipped with ADSR sliders, the usual oscillator and filter types, as well as frequency and filter modulation.",
+            "The video features a quick improvisation to demo some sounds of the synth. I also took the liberty of automating the synths' filter frequency and some panning!"
+          ]
+        },
+        {
+          title: "3D Spectrogram Visualizer",
+          video: "https://www.youtube.com/embed/WbGTJbrw83U?si=xbWaqE9aO7AsLnuJ",
+          paragraphs: [
+            "Created using Python (pydub for audio data, mpl_toolkits for modeling). The demo features an unmastered song of mine."
+          ]
+        },
+        {
           title: "Denoising DNN for Acoustic Guitar",
           video: "https://player.vimeo.com/video/1058779211?h=8370fcaaaa",
           paragraphs: [
@@ -10,17 +25,18 @@ export default function Projects() {
           ]
         },
         {
-          title: "3D Spectrogram Visualizer",
-          video: "https://www.youtube.com/embed/H_6G0b67A-0?si=a03QR174ytsFCkRh",
+          title:"Sampler",
+          video: "https://www.youtube.com/embed/YqVmvuLJy_k?si=WfnKxLKGuKfM3oRO",
           paragraphs: [
-            "Created using Python (pydub for audio data, mpl_toolkits for modeling). The demo features some old music I made."
+            "Straightforward stereo-supported plugin to play audio samples as an instrument, includes ADSR capabilities as well."
           ]
         }
+
       ]
 
    
     return (
-    <div className="flex flex-col gap-24 py-24 px-4 md:px-12 py-12">
+    <div className="flex flex-col gap-30 py-24 px-4 md:px-12 py-12">
         {projects.map((project, i) => (
         <div key={i} className="flex flex-col md:flex-row gap-8 items-start">
             {/* video column */}

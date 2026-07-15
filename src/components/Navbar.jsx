@@ -10,14 +10,14 @@ export default function Navbar() {
                 <Link to="/" className="text-gray-300 hover:text-white text-sm lg:text-base">
                     Home
                     </Link>
+                    <Link to="/about" className="text-gray-300 hover:text-white text-sm lg:text-base">
+                    About
+                    </Link>
                     <Link to="/projects" className="text-gray-300 hover:text-white text-sm lg:text-base">
                     Projects
                     </Link>
                     <Link to="/music" className="text-gray-300 hover:text-white text-sm lg:text-base">
                     Music
-                    </Link>
-                    <Link to="/about" className="text-gray-300 hover:text-white text-sm lg:text-base">
-                    About
                     </Link>
                     <Link to="/resume" className="text-gray-300 hover:text-white text-sm lg:text-base">
                     Resumé

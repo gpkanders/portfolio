@@ -11,7 +11,6 @@ export default defineConfig({
     imagetools(),
     react(),
     babel({ presets: [reactCompilerPreset()] }),
-    tailwindcss(),
-    imagetools()
+    tailwindcss()
   ],
 })
