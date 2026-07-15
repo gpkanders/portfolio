@@ -24,7 +24,11 @@ export default function Music() {
           <div className="flex flex-col gap-16">
             {leftColumn.map((video) => (
               <div key={video.title} className="aspect-video w-full">
-                <iframe src={video.embed} title={video.title} className="w-full h-full rounded-lg" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                <iframe src={video.embed} 
+                loading="lazy"
+                width="200"
+                height="100"
+                title={video.title} className="w-full h-full rounded-lg" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
               </div>
             ))}
           </div>
@@ -32,7 +36,10 @@ export default function Music() {
           <div className="flex flex-col gap-16 md:mt-32">
             {rightColumn.map((video) => (
               <div key={video.title} className="aspect-video w-full">
-                <iframe src={video.embed} title={video.title} className="w-full h-full rounded-lg" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+                <iframe src={video.embed} 
+                loading="lazy"
+                width="200"
+                title={video.title} className="w-full h-full rounded-lg" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
               </div>
             ))}
           </div>

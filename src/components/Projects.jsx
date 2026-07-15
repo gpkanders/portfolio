@@ -43,6 +43,9 @@ export default function Projects() {
             <div className="w-full md:w-1/2 aspect-video">
             <iframe
                 src={project.video}
+                loading="lazy"
+                width="200"
+                height="100"
                 className="w-full h-full rounded-lg"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
