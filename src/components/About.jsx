@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import headshot from "../profilePic/DSC_4819.jpg"
+import headshot from "../profilePic/DSC_4819.jpg?w=500&format=webp"
 
 export default function About() {
     const sectionRef = useRef(null)
