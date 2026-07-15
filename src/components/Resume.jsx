@@ -9,7 +9,6 @@ export default function Resume() {
             <h1 className="text-3xl font-bold text-white">George P. K. Anders</h1>
             <div className="flex flex-row flex-wrap gap-x-4 gap-y-1 text-sm text-gray-400">
               <span>georgeanders.com</span>
-              <span>(510) 325-0025</span>
               <span>gpkanders@gmail.com</span>
             </div>
           </div>
@@ -64,11 +63,11 @@ export default function Resume() {
             <div className="flex flex-col gap-2">
               <div className="flex flex-row justify-between flex-wrap">
                 <span className="font-semibold text-white">Personal AI — Platform Engineer, AI Architect</span>
-                <span className="text-sm text-gray-400">Aug 2025 – May 2026</span>
+                {/* <span className="text-sm text-gray-400">Aug 2025 – May 2026</span> */}
               </div>
               <span className="text-sm text-gray-400">San Francisco, CA</span>
               <ul className="flex flex-col gap-1 mt-1 list-disc list-inside text-gray-300 text-sm">
-                <li>Designed and shipped backend integrations and automated workflows for 15+ client use cases.</li>
+                <li>Designed and shipped backend integrations and automated workflows for 15+ client use cases, writing production Python services and APIs that translated business requirements into working software.</li>
                 <li>Built FastAPI pipelines to ingest and transform heterogeneous data for downstream retrieval systems.</li>
                 <li>Architected automated workflow orchestration using n8n to replace manual processes.</li>
               </ul>
@@ -77,13 +76,26 @@ export default function Resume() {
             <div className="flex flex-col gap-2">
               <div className="flex flex-row justify-between flex-wrap">
                 <span className="font-semibold text-white">UFZ Helmholtz Centre — Research Intern</span>
-                <span className="text-sm text-gray-400">Jun–Aug 2022, Jun–Aug 2023</span>
+                {/* <span className="text-sm text-gray-400">Jun–Aug 2022, Jun–Aug 2023</span> */}
               </div>
               <span className="text-sm text-gray-400">Leipzig, Germany</span>
               <ul className="flex flex-col gap-1 mt-1 list-disc list-inside text-gray-300 text-sm">
-                <li>Designed a data analysis pipeline correlating air/soil temperature extremes with surface heat fluxes.</li>
-                <li>Performed QA checks and automated data pulls across repeated test runs.</li>
+                <li>Designed and executed a data analysis pipeline to correlate air/soil temperature extremes with surface heat fluxes using Python and Shell scripts to interface with remote cluster database</li>
+                <li>Performed QA checks and test validation on geospatial datasets; automated data pulls and result logging across repeated test runs.</li>
                 <li>Built and tuned a Random Forest model for predicting latent heat flux; evaluated accuracy using eddy covariance measurements and integrated HOLAPS satellite data, enabling further research for the Remote Sensing Team’s research in land-atmosphere interactions</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row justify-between flex-wrap">
+                <span className="font-semibold text-white">Institute of the Environment and Sustainability at UCLA - Research Assistant</span>
+                {/* <span className="text-sm text-gray-400">May 2023-April 2024</span> */}
+              </div>
+              <span className="text-sm text-gray-400">Los Angeles, CA</span>
+              <ul className="flex flex-col gap-1 mt-1 list-disc list-inside text-gray-300 text-sm">
+                <li>Built end-to-end data pipelines to train and evaluate machine learning models for classifying beach width from satellite imagery.</li>
+                <li>Wrote scripts to clean, label, and validate training data, and debugged model output to improve accuracy and pipeline efficiency.</li>
+                <li>Cross-validated model predictions against ground-truth annotations produced in ArcGIS Pro.</li>
               </ul>
             </div>
   

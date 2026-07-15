@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import headshot from "../profilePic/DSC_4819.jpg"
 
 export default function About() {
     const sectionRef = useRef(null)
@@ -22,6 +23,7 @@ export default function About() {
             ref={sectionRef}
             className="relative min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
         >
+
             <div className="flex flex-col gap-8 justify-start items-start w-full px-4 py-8 md:p-24 text-left">
                 <h1 className="text-gray-300 text-4xl md:text-4xl font-bold">Hello!</h1>
 
@@ -40,6 +42,8 @@ export default function About() {
                     email: gpkanders@gmail.com
                 </p>
             </div>
+
+            <img src={headshot} className="w-2xs h-500px pb-70 object-top-right"/>
 
 
 
