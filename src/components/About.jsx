@@ -21,31 +21,32 @@ export default function About() {
     return (
         <section
             ref={sectionRef}
-            className="relative min-h-screen flex items-center justify-center pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+            className="relative min-h-dvh flex flex-col md:flex-row items-center justify-center gap-8 pt-16 sm:pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
         >
+            <div className="flex flex-col gap-6 sm:gap-8 justify-start items-start w-full md:w-auto md:max-w-xl px-4 py-8 md:p-24 text-left order-2 md:order-1">
+                <h1 className="text-gray-300 text-3xl sm:text-4xl font-bold">Hello!</h1>
 
-            <div className="flex flex-col gap-8 justify-start items-start w-full px-4 py-8 md:p-24 text-left">
-                <h1 className="text-gray-300 text-4xl md:text-4xl font-bold">Hello!</h1>
-
-                <p className="text-gray-300 text-xl">
+                <p className="text-gray-300 text-lg sm:text-xl">
                     My name is George Anders; this is a collection of my work,
                     research, music, and more.
                 </p>
-                <p className="text-gray-300 text-xl">
+                <p className="text-gray-300 text-lg sm:text-xl">
                     With a Mathematics of Computation B.Sc from UCLA,
                     I have been applying learned technical skills to various passions of mine.
                 </p>
-                <p className="text-gray-300 text-xl">
+                <p className="text-gray-300 text-lg sm:text-xl">
                     This website was built using React and TailwindCSS (deployed on Vercel).
                 </p>
-                <p className="text-gray-300 text-xl mt-30">
+                <p className="text-gray-300 text-lg sm:text-xl mt-8 sm:mt-16 md:mt-[7.5rem]">
                     email: gpkanders@gmail.com
                 </p>
             </div>
 
-            <img src={headshot} className="w-2xs h-500px pb-70 object-top-right"/>
-
-
+            <img
+                src={headshot}
+                alt="Headshot of George Anders"
+                className="w-40 sm:w-56 md:w-72 lg:w-[20rem] h-auto object-contain object-right-top order-1 md:order-2 shrink-0"
+            />
 
             {/* cursor glow animation */}
             <div

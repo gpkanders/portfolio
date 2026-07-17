@@ -39,6 +39,7 @@ export default function Music() {
                 <iframe src={video.embed} 
                 loading="lazy"
                 width="200"
+                height="100"
                 title={video.title} className="w-full h-full rounded-lg" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
               </div>
             ))}
