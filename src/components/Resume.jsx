@@ -52,7 +52,7 @@ export default function Resume() {
               </div>
               <div className="flex flex-row gap-2">
                 <span className="font-semibold text-white shrink-0">Audio & DSP:</span>
-                <span className="text-gray-300">Digital Signal Processing, Filter Design, FFT & Spectral Analysis, Convolution, Real Time Audio Programming, AU/VST3 Plugin Development, Audio Machine Learning</span>
+                <span className="text-gray-300"> Real Time Audio Programming, AU/VST3 Plugin Development, Audio Machine Learning, Filter Design, FFT & Spectral Analysis, Convolution</span>
               </div>
             </div>
           </div>
