@@ -44,11 +44,15 @@ export default function Resume() {
             <div className="flex flex-col gap-2">
               <div className="flex flex-row gap-2">
                 <span className="font-semibold text-white shrink-0">Languages & Tools:</span>
-                <span className="text-gray-300">C++, Shell Scripting, Python, SQL, React, ArcGIS Pro, CMake</span>
+                <span className="text-gray-300">C++, Python, TypeScript, SQL, Shell Scripting, React, CMake, Supabase, pluginval</span>
               </div>
               <div className="flex flex-row gap-2">
                 <span className="font-semibold text-white shrink-0">Libraries & Frameworks:</span>
-                <span className="text-gray-300">PyTorch, scikit-learn, Pandas, FastAPI, NumPy, JUCE, n8n</span>
+                <span className="text-gray-300">JUCE, PyTorch, librosa, FastAPI, NumPy, Pandas, scikit-learn, n8n</span>
+              </div>
+              <div className="flex flex-row gap-2">
+                <span className="font-semibold text-white shrink-0">Audio & DSP:</span>
+                <span className="text-gray-300">Digital Signal Processing, Filter Design, FFT & Spectral Analysis, Convolution, Real Time Audio Programming, AU/VST3 Plugin Development, Audio Machine Learning</span>
               </div>
             </div>
           </div>
