@@ -14,6 +14,7 @@ import AboutPage from './pages/AboutPage'
 import MusicPage from './pages/MusicPage'
 import ResumePage from './pages/ResumePage'
 import GalleryPage from './pages/GalleryPage'
+import ProjectDetailPage from './pages/ProjectDetailPage'
 
 
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/projects" element={<ProjectsPage/>}/>
+            <Route path="/projects/:slug" element={<ProjectDetailPage/>}/>
             <Route path="/music" element={<MusicPage/>}/>
             <Route path="/resume" element={<ResumePage/>}/>
             <Route path="/gallery" element={<GalleryPage/>}/>
