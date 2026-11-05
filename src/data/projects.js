@@ -11,7 +11,9 @@ export const projects = [
           thumbnail: eqThumb,
           paragraphs: [
             "A 6 band EQ (AU/VST3) with a tilt filter, per band dynamics, and a two track spectrum analyzer. Its Learn mode listens to your track and a reference on the sidechain, then dials in the band settings that move your sound toward the reference.",
-            "Learn runs a small neural network I trained in PyTorch, inferenced with hand written C++ and no ML runtime, then refined with a Levenberg-Marquardt solver. Amount and Smooth controls re-run the match live. Built in C++20 with JUCE 8, with tests that assert the audio thread never allocates."
+            "Every band is a trapezoidal state variable filter with smoothed, gliding coefficients, so sweeps and automation stay click free. Any band can go dynamic: a band limited detector, keyed from the main input or the sidechain, feeds a soft knee gain computer that adds boost or cut only when that part of the spectrum gets loud.",
+            "Learn averages the long term power spectra of both tracks, smooths them on an ERB scale that follows the ear's critical bands, and builds the target curve between them. A small neural network I trained in PyTorch on synthetic EQ curves predicts all six bands from that curve, and a Levenberg-Marquardt solver refines the result to fit the target exactly. The network runs in hand written C++ with no ML runtime, and Amount and Smooth controls re-run the match live.",
+            "Built in C++20 with JUCE 8. Analysis and inference run on their own threads, so the audio thread never locks or allocates, and a test suite covers everything from filter accuracy to an end to end Learn pipeline that recovers a random EQ from pink noise."
           ]
         },
         {
