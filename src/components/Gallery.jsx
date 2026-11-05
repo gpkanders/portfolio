@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 //comment
 const thumbModules = import.meta.glob('/src/4gallery/IMG_*.jpg', {
