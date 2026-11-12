@@ -110,7 +110,49 @@ export default function Resume() {
             <h2 className="text-lg font-bold text-white uppercase tracking-wide border-b border-gray-700 pb-1">
               Audio Programming
             </h2>
-  
+
+            <div className="flex flex-col gap-2">
+              <span className="font-semibold text-white">MixBusMaster: Learning EQ Plugin</span>
+              <ul className="flex flex-col gap-1 list-disc list-inside text-gray-300 text-sm">
+                <li>Built a 6 band dynamic EQ (AU/VST3) in C++20 and JUCE 8 with a Learn mode that matches a track's tonal balance to a sidechain reference using ERB smoothed long term spectra.</li>
+                <li>Trained a PyTorch network on synthetic EQ curves to predict band settings, refined by a Levenberg-Marquardt solver, with inference in hand written C++ and no ML runtime.</li>
+                <li>Implemented click free trapezoidal SVF filters and a lock free threading model, covered by tests from filter accuracy to end to end Learn recovery.</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span className="font-semibold text-white">CleanRec: Room Tone Denoiser Plugin</span>
+              <ul className="flex flex-col gap-1 list-disc list-inside text-gray-300 text-sm">
+                <li>Developed a denoiser (AU/VST3) using a streaming STFT with OM-LSA gain estimation, MCRA adaptive noise tracking, and automatic 50/60 Hz hum removal.</li>
+                <li>Wrote a JUCE independent C++20 DSP engine shared by the plugin and an offline CLI, with allocation free real time processing verified by null tests below -120 dBFS.</li>
+                <li>Built a Python evaluation suite (SI-SDR, PESQ, STOI, DNSMOS) benchmarking against RNNoise and DeepFilterNet3, approaching DeepFilterNet3 on stationary noise at a fraction of the CPU.</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span className="font-semibold text-white">CR-02: Creative IR Convolution Plugin</span>
+              <ul className="flex flex-col gap-1 list-disc list-inside text-gray-300 text-sm">
+                <li>Built an IR convolution plugin (AU/VST3) that reshapes impulse responses through chopping, reversal, stretching, and degradation, with seeded and BPM synced slice patterns.</li>
+                <li>Rebuilt IRs off the audio thread with automatic loudness matching to prevent level jumps during parameter changes.</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span className="font-semibold text-white">CLIP: Clipper Plugin</span>
+              <ul className="flex flex-col gap-1 list-disc list-inside text-gray-300 text-sm">
+                <li>Developed a clipper (AU/VST3) with six transfer curves, using antiderivative antialiasing and up to 16x linear phase oversampling with Thiran allpass alignment for a sample accurate dry/wet mix.</li>
+                <li>Unit tested header only DSP and set up CI running pluginval at strictness 10 on every push.</li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <span className="font-semibold text-white">CHOPPER: Sample Chopping Web App</span>
+              <ul className="flex flex-col gap-1 list-disc list-inside text-gray-300 text-sm">
+                <li>Built a full stack app that detects tempo and onsets in uploaded songs and exports bar accurate loops, with a FastAPI/librosa backend and React/TypeScript frontend.</li>
+                <li>Snapped loop boundaries to drum hits using band limited spectral flux; ran jobs through a rate limited queue on Render with Supabase for auth, job tracking, and storage.</li>
+              </ul>
+            </div>
+
             <div className="flex flex-col gap-2">
               <span className="font-semibold text-white">Denoising DNN for Acoustic Guitar</span>
               <ul className="flex flex-col gap-1 list-disc list-inside text-gray-300 text-sm">
