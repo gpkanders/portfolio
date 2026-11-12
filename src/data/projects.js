@@ -19,7 +19,7 @@ export const projects = [
         {
           slug: "clip",
           title: "CLIP: Clipper Plugin",
-          video: "https://www.loom.com/embed/e48e8fe26f68457fa41ff63c34188500",
+          video: "https://www.loom.com/embed/c59c9b0de799436fa1f1c3f1953a0ecf",
           thumbnail: clipThumb,
           paragraphs: [
             "A hard/soft clipper (AU/VST3) with six transfer curves (Hard, Soft, Linear, Tanh, Sine, Cubic), adjustable knee, and a Detail control that keeps high end riding on clipped peaks. A live transfer curve and peak history display show exactly what is being clipped.",
@@ -29,7 +29,7 @@ export const projects = [
         {
           slug: "cr-02",
           title: "CR-02: Creative IR Convolution Plugin",
-          video: "https://www.loom.com/embed/c59c9b0de799436fa1f1c3f1953a0ecf",
+          video: "https://www.loom.com/embed/e48e8fe26f68457fa41ff63c34188500",
           thumbnail: cr02Thumb,
           paragraphs: [
             "An impulse response convolution plugin (AU/VST3) for reverbs and cabinet sims that also treats the IR as something to play with. Load any IR or pick from 46 built in ones, then reverse, stretch, chop, and degrade it to get textures that regular effects on the audio can't.",
