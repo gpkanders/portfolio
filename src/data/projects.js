@@ -2,6 +2,7 @@ import eqThumb from "../assets/projects/eq.png?w=1000&format=webp"
 import clipThumb from "../assets/projects/clip.png?w=1000&format=webp"
 import cr02Thumb from "../assets/projects/cr02.png?w=1000&format=webp"
 import chopperThumb from "../assets/projects/chopper.png?w=1000&format=webp"
+import cleanrecThumb from "../assets/projects/cleanrec.png?w=1000&format=webp"
 
 export const projects = [
         {
@@ -17,13 +18,15 @@ export const projects = [
           ]
         },
         {
-          slug: "clip",
-          title: "CLIP: Clipper Plugin",
-          video: "https://www.loom.com/embed/c59c9b0de799436fa1f1c3f1953a0ecf",
-          thumbnail: clipThumb,
+          slug: "cleanrec",
+          title: "CleanRec: Room Tone Denoiser Plugin",
+          video: "https://www.loom.com/embed/63923a82bcfb4812bc6509c9fbdef4b9",
+          thumbnail: cleanrecThumb,
           paragraphs: [
-            "A hard/soft clipper (AU/VST3) with six transfer curves (Hard, Soft, Linear, Tanh, Sine, Cubic), adjustable knee, and a Detail control that keeps high end riding on clipped peaks. A live transfer curve and peak history display show exactly what is being clipped.",
-            "Aliasing is kept down with antiderivative antialiasing (ADAA) plus up to 16x linear phase oversampling, with Thiran allpass alignment so the dry/wet mix stays sample accurate. The DSP is header only and unit tested, and CI runs pluginval at strictness 10 on every push."
+            "A denoiser (AU/VST3) that removes steady room tones like (e.g. fans, hum,  preamp hiss) while leaving audio intact. Press Learn over a few seconds of room tone to capture a noise profile, or switch on Adaptive to track the noise continuously with no Learn step. Hum removal notches out 50 or 60 Hz mains and their harmonics, with an Auto mode that detects which one while learning.",
+            "Audio runs through a streaming STFT with 75% overlap and a fixed one frame latency (about 43 ms at 48 kHz) reported to the host. Each bin's gain comes from an OM-LSA rule, a log spectral amplitude estimator weighted by speech presence probability. Adaptive mode tracks the noise floor with MCRA, and the gain mask is smoothed on an ERB scale with attack and release to remove musical noise artifacts.",
+            "The DSP engine is plain C++20 with no JUCE dependency, shared by the plugin and an offline CLI. The audio thread never allocates or locks, and null tests verify the output to below -120 dBFS at any block size. A Python evaluation suite scores it with SI-SDR, PESQ, STOI, and DNSMOS against RNNoise and DeepFilterNet3. On stationary noise it comes close to DeepFilterNet3 while using a fraction of the CPU.",
+            "My apologies for the voice overlay artifacts towards the end there. Hope you enjoy the demo!"
           ]
         },
         {
@@ -34,6 +37,16 @@ export const projects = [
           paragraphs: [
             "An impulse response convolution plugin (AU/VST3) for reverbs and cabinet sims that also treats the IR as something to play with. Load any IR or pick from 46 built in ones, then reverse, stretch, chop, and degrade it to get textures that regular effects on the audio can't.",
             "CHOP slices the IR into stutters, reverses, drops, and swaps, with seeded patterns that recall with the session and an optional BPM synced grid. AGE, SATURATE, WOBBLE, DOWNSAMPLE, and CRUSH degrade the IR itself. Every change rebuilds the IR off the audio thread with automatic loudness matching, so tweaking never causes level jumps."
+          ]
+        },
+        {
+          slug: "clip",
+          title: "CLIP: Clipper Plugin",
+          video: "https://www.loom.com/embed/c59c9b0de799436fa1f1c3f1953a0ecf",
+          thumbnail: clipThumb,
+          paragraphs: [
+            "A hard/soft clipper (AU/VST3) with six transfer curves (Hard, Soft, Linear, Tanh, Sine, Cubic), adjustable knee, and a Detail control that keeps high end riding on clipped peaks. A live transfer curve and peak history display show exactly what is being clipped.",
+            "Aliasing is kept down with antiderivative antialiasing (ADAA) plus up to 16x linear phase oversampling, with Thiran allpass alignment so the dry/wet mix stays sample accurate. The DSP is header only and unit tested, and CI runs pluginval at strictness 10 on every push."
           ]
         },
         {
