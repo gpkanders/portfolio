@@ -16,7 +16,7 @@ export default function Music() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 w-full max-w-5xl">
           <div className="flex flex-col gap-16">
             {leftColumn.map((video) => (
-              <div key={video.title} className="aspect-video w-full">
+              <div key={video.title} className="aspect-video w-full rounded-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25">
                 <iframe src={video.embed} 
                 loading="lazy"
                 width="200"
@@ -28,7 +28,7 @@ export default function Music() {
   
           <div className="flex flex-col gap-16 md:mt-32">
             {rightColumn.map((video) => (
-              <div key={video.title} className="aspect-video w-full">
+              <div key={video.title} className="aspect-video w-full rounded-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25">
                 <iframe src={video.embed} 
                 loading="lazy"
                 width="200"

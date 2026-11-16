@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage'
 import MusicPage from './pages/MusicPage'
 import ResumePage from './pages/ResumePage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
+import GlowLayout from './components/GlowLayout'
 
 
 
@@ -14,16 +15,18 @@ import ProjectDetailPage from './pages/ProjectDetailPage'
 
 function App() {
   return(
-      <div className="min-h-screen bg-slate-950 text-slate overflow-hidden">
+      <div className="isolate min-h-screen bg-slate-950 text-slate overflow-hidden">
         <Router>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/projects" element={<ProjectsPage/>}/>
+            <Route element={<GlowLayout/>}>
+              <Route path="/about" element={<AboutPage/>}/>
+              <Route path="/projects" element={<ProjectsPage/>}/>
+              <Route path="/music" element={<MusicPage/>}/>
+              <Route path="/resume" element={<ResumePage/>}/>
+            </Route>
             <Route path="/projects/:slug" element={<ProjectDetailPage/>}/>
-            <Route path="/music" element={<MusicPage/>}/>
-            <Route path="/resume" element={<ResumePage/>}/>
           </Routes>
         </Router>
       </div>
