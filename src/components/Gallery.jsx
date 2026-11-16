@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const thumbModules = import.meta.glob('/src/4gallery/*.{jpg,jpeg}', {
   eager: true,
   import: 'default',
-  query: '?w=400&format=webp',
+  query: '?w=400;700;1000&aspect=1:1&format=webp&as=srcset',
 });
 
 const fullModules = import.meta.glob('/src/4gallery/*.{jpg,jpeg}', {
@@ -38,7 +38,8 @@ export default function Gallery() {
         {images.map((img) => (
           <div key={img.thumbSrc} style={styles.cell} onClick={() => setSelectedSrc(img.fullSrc)}>
             <img
-              src={img.thumbSrc}
+              srcSet={img.thumbSrc}
+              sizes="(max-width: 463px) 100vw, 310px"
               alt={img.alt}
               loading="lazy"
               decoding="async"
