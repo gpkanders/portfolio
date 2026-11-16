@@ -5,7 +5,6 @@ import ProjectsPage from './pages/ProjectsPage'
 import AboutPage from './pages/AboutPage'
 import MusicPage from './pages/MusicPage'
 import ResumePage from './pages/ResumePage'
-import GalleryPage from './pages/GalleryPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
 
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/projects/:slug" element={<ProjectDetailPage/>}/>
             <Route path="/music" element={<MusicPage/>}/>
             <Route path="/resume" element={<ResumePage/>}/>
-            <Route path="/gallery" element={<GalleryPage/>}/>
           </Routes>
         </Router>
       </div>

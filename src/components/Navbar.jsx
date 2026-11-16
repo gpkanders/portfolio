@@ -22,9 +22,6 @@ export default function Navbar() {
                     <Link to="/resume" className="text-gray-300 hover:text-white text-sm lg:text-base">
                     Resumé
                     </Link>
-                    <Link to="/gallery" className="text-gray-300 hover:text-white text-sm lg:text-base">
-                    Gallery
-                    </Link>
                 </div>
             </div>
         </div>

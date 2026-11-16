@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 
 //comment
-const thumbModules = import.meta.glob('/src/4gallery/IMG_*.jpg', {
+const thumbModules = import.meta.glob('/src/4gallery/*.{jpg,jpeg}', {
   eager: true,
   import: 'default',
   query: '?w=400&format=webp',
 });
 
-const fullModules = import.meta.glob('/src/4gallery/IMG_*.jpg', {
+const fullModules = import.meta.glob('/src/4gallery/*.{jpg,jpeg}', {
   eager: true,
   import: 'default',
   query: '?w=1600&format=webp',
@@ -133,7 +133,6 @@ const styles = {
     paddingRight: '24px',
     paddingBottom: '24px',
     paddingLeft: '24px',
-    background: '#111',
     minHeight: '100vh',
     boxSizing: 'border-box',
   },
