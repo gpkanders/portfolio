@@ -1,7 +1,7 @@
 export default function Resume() {
     return (
       // outer page
-      <div className="flex flex-col items-center bg-slate-950 text-gray-300 px-4 py-16 md:py-24">
+      <div className="flex flex-col items-center text-gray-300 px-4 py-16 md:py-24">
         <div className="flex flex-col gap-12 w-full max-w-3xl">
   
           {/*header */}
