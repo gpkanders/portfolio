@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage'
 import MusicPage from './pages/MusicPage'
 import ResumePage from './pages/ResumePage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
+import NotFoundPage from './pages/NotFoundPage'
 import GlowLayout from './components/GlowLayout'
 
 
@@ -27,6 +28,7 @@ function App() {
               <Route path="/resume" element={<ResumePage/>}/>
             </Route>
             <Route path="/projects/:slug" element={<ProjectDetailPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
           </Routes>
         </Router>
       </div>
